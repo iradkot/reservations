@@ -6,7 +6,17 @@ var reservations = {
 var name = prompt('Please enter the name for your reservation');
 
 var claimReservation = function () {
-  // write your code here!
+	if (name in reservations)	{
+		if (reservations[name].claimed) {
+			alert('someone took your place, sry..')
+		}
+		else	{
+			alert('welcome!')
+		}
+	}
+	else	{
+		alert('name doesnt exist in our system');
+	}
 }
 
 claimReservation();
